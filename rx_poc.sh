@@ -6,3 +6,6 @@ hour=$(TZ='Morocco/Casablanca' date -u +%H)
 day=$(TZ='Morocco/Casablanca' date -u +%d)
 month=$(TZ='Morocco/Casablanca' date +%m)
 year=$(TZ='Morocco/Casablanca' date +%Y)
+
+record=$(echo -e "$year\t$month\t$day\t$hour\t$obs_temp\t$fc_temp C")
+echo $record >> rx_poc.log
