@@ -1,6 +1,6 @@
 #!/bin/bash
 yesterday_fc=$(tail -2 rx_poc.log | head -1 | cut -d " " -f6)
-today_temp=$(tail -1 rx_poc.log | cut -d " " -f4)
+today_temp=$(tail -1 rx_poc.log | cut -d " " -f5)
 accuracy=$(($yesterday_fc-$today_temp))
 
 if [ -1 -le $accuracy ] && [ $accuracy -le 1 ]
